@@ -26,11 +26,11 @@ export default function FaqSection() {
   return (
     <section className="py-20 bg-slate-50 max-w-4xl mx-auto px-4 sm:px-margin-desktop" id="faq">
       {/* Section Header */}
-      <div className="text-center max-w-xl mx-auto mb-12">
-        <h2 className="typo-h1 text-[#00355f] mb-3">
+      <div className="text-center max-w-xl mx-auto mb-6 sm:mb-12">
+        <h2 className="typo-h1 text-[#00355f] mb-2 sm:mb-3">
           Câu hỏi thường gặp
         </h2>
-        <p className="typo-body text-slate-500 text-sm sm:text-base">
+        <p className="typo-body text-slate-500 text-sm sm:text-base hidden sm:block">
           Giải đáp những thắc mắc phổ biến về dịch vụ xe taxi & xe ghép của chúng tôi.
         </p>
       </div>

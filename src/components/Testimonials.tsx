@@ -30,11 +30,11 @@ export default function Testimonials() {
   return (
     <section className="bg-surface-container-low py-section-gap" id="reviews">
       <div className="max-w-container-max mx-auto px-4 sm:px-margin-desktop">
-        <div className="text-center mb-16">
-          <h2 className="typo-h1 text-primary mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="typo-h1 text-primary mb-2 sm:mb-4">
             Khách hàng nói gì về chúng tôi
           </h2>
-          <p className="text-on-surface-variant font-body-lg">
+          <p className="text-on-surface-variant font-body-lg hidden sm:block">
             Được tin tưởng bởi hàng ngàn hành khách mỗi tháng.
           </p>
         </div>

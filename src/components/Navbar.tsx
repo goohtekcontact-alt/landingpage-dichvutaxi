@@ -38,8 +38,25 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-1" : "bg-transparent py-2"
       }`}>
       <nav className="flex justify-between items-center max-w-container-max mx-auto px-4 sm:px-margin-desktop h-20">
-        {/* Brand Logo temporarily hidden */}
-        <div className="w-4" />
+        {/* Left Side: Mobile Menu Toggle (≡) & "Đặt xe ngay" Button (No Icon) */}
+        <div className="flex items-center gap-2.5">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg text-primary hover:bg-surface-container"
+            aria-label="Toggle menu"
+          >
+            <span className="material-symbols-outlined text-2xl">
+              {mobileMenuOpen ? "close" : "menu"}
+            </span>
+          </button>
+
+          <button
+            onClick={() => onOpenBookingModal()}
+            className="hidden sm:inline-block bg-accent-orange text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold hover:brightness-110 active:scale-95 transition-all shadow-md"
+          >
+            Đặt xe ngay
+          </button>
+        </div>
 
         {/* Desktop Navigation Links with Refined Font Style */}
         <div className="hidden md:flex items-center space-x-8 font-sans">
@@ -97,26 +114,6 @@ export default function Navbar({ onOpenBookingModal }: NavbarProps) {
           >
             Liên hệ
           </a>
-        </div>
-
-        {/* CTA Button & Mobile Toggle */}
-        <div className="flex items-center gap-4">
-          <button
-            onClick={() => onOpenBookingModal()}
-            className="bg-accent-orange text-white px-6 py-2.5 rounded-full typo-btn hover:brightness-110 active:scale-95 transition-all shadow-md"
-          >
-            Đặt xe ngay
-          </button>
-
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-primary hover:bg-surface-container"
-            aria-label="Toggle menu"
-          >
-            <span className="material-symbols-outlined text-2xl">
-              {mobileMenuOpen ? "close" : "menu"}
-            </span>
-          </button>
         </div>
       </nav>
 

@@ -4,13 +4,11 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroBanner from "@/components/HeroBanner";
 import ServicesSection from "@/components/ServicesSection";
+import PopularRoutes from "@/components/PopularRoutes";
 import FleetShowcase from "@/components/FleetShowcase";
-import BookingProcess from "@/components/BookingProcess";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
-import AboutStats from "@/components/AboutStats";
-import CoverageMap from "@/components/CoverageMap";
-import FaqSection from "@/components/FaqSection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import QuickCallFloat from "@/components/QuickCallFloat";
 
@@ -33,32 +31,26 @@ export default function Home() {
       {/* Our Services */}
       <ServicesSection onOpenBookingModal={handleOpenCall} />
 
+      {/* Popular Routes (Xe Ghép) */}
+      <PopularRoutes onOpenBookingModal={handleOpenCall} />
+
       {/* Vehicle Fleet */}
       <FleetShowcase onOpenBookingModal={handleOpenCall} />
 
-      {/* Booking Process */}
-      <BookingProcess />
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* How It Works */}
+      <HowItWorks />
 
       {/* Customer Reviews */}
       <Testimonials />
-
-      {/* About & Stats */}
-      <AboutStats />
-
-      {/* Coverage & Map */}
-      <CoverageMap onOpenBookingModal={handleOpenCall} />
-
-      {/* FAQ */}
-      <FaqSection />
-
-      {/* Contact Section */}
-      <ContactSection />
 
       {/* Footer */}
       <Footer />
 
       {/* Floating Action Buttons */}
-      <QuickCallFloat onOpenBookingModal={handleOpenCall} />
+      <QuickCallFloat />
     </main>
   );
 }

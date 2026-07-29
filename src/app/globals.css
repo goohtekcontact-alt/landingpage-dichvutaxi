@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,15 +14,34 @@ html {
   scroll-behavior: smooth;
 }
 
-body, p, span, div, a, button, input, textarea, select, label, li {
+body,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li {
   font-family: var(--font-be-vietnam), system-ui, -apple-system, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-plus-jakarta), var(--font-be-vietnam), sans-serif;
 }
 
 @layer utilities {
+  .font-mea-culpa {
+    font-family: MeaCulpaCustom, var(--font-mea-culpa), 'Mea Culpa', cursive;
+  }
+
   /* Standardized Typography Design Tokens */
   /* Section Main Title (Great Vibes) */
   .font-section-title,
@@ -95,9 +115,11 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #00355f;
   border-radius: 4px;

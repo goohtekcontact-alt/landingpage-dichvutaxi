@@ -76,6 +76,7 @@ const config: Config = {
         sans: ["var(--font-be-vietnam)", "system-ui", "sans-serif"],
         heading: ["var(--font-plus-jakarta)", "var(--font-be-vietnam)", "sans-serif"],
         sectionTitle: ["var(--font-great-vibes)", "var(--font-be-vietnam)", "cursive", "sans-serif"],
+        meaCulpa: ["MeaCulpaCustom", "var(--font-mea-culpa)", "Mea Culpa", "cursive"],
       },
     },
   },

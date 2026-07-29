@@ -10,24 +10,24 @@ interface ServicesSectionProps {
 
 export default function ServicesSection({ onOpenBookingModal }: ServicesSectionProps) {
   return (
-    <section id="services" className="py-20 bg-slate-50">
+    <section id="services" className="pt-12 sm:pt-16 pb-6 sm:pb-10 bg-slate-50">
       <div className="max-w-container-max mx-auto px-4 sm:px-margin-desktop">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="typo-h1 text-slate-900 mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-14">
+          <h2 className="typo-h1 text-slate-900 mb-2 sm:mb-4">
             Dịch vụ của chúng tôi
           </h2>
-          <p className="typo-lead text-slate-600">
+          <p className="typo-lead text-slate-600 hidden sm:block">
             Giải pháp di chuyển linh hoạt, an toàn và tiện lợi cho mọi nhu cầu của bạn.
           </p>
         </div>
 
-        {/* 2 Main Service Cards Grid with Full-Bleed Background Images */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        {/* 2 Main Service Cards Grid with Full-Bleed Background Images (2 Columns on Mobile & Desktop) */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-8 mb-8 sm:mb-12">
           
           {/* Card 1: Taxi 4 chỗ - 7 chỗ (Full Bleed Background Image) */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-10 text-white min-h-[420px] flex flex-col justify-between group">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl p-4 sm:p-8 text-white min-h-[340px] sm:min-h-[420px] flex flex-col justify-between group">
             
             {/* Full Card Background Image */}
             <div className="absolute inset-0 z-0">
@@ -42,47 +42,50 @@ export default function ServicesSection({ onOpenBookingModal }: ServicesSectionP
               <div className="absolute inset-0 bg-gradient-to-r from-[#062452] via-[#093570]/90 to-transparent" />
             </div>
 
-            {/* Card Content Overlay */}
-            <div className="relative z-10 space-y-5 max-w-xs sm:max-w-sm">
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-blue-600 shadow-md">
-                <span className="material-symbols-outlined text-3xl">directions_car</span>
+            {/* Card Content Overlay (Full Height Flex) */}
+            <div className="relative z-10 h-full flex flex-col justify-between w-full space-y-4">
+              {/* Top Group: Icon, Title & Bullets */}
+              <div className="space-y-3 sm:space-y-4">
+                {/* Icon */}
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white flex items-center justify-center text-blue-600 shadow-md">
+                  <span className="material-symbols-outlined text-2xl sm:text-3xl">directions_car</span>
+                </div>
+
+                {/* Title & Subtitle */}
+                <div>
+                  <h3 className="text-base sm:text-2xl font-bold text-white mb-1 sm:mb-2 leading-snug">
+                    Taxi 4 - 7 chỗ
+                  </h3>
+                  <p className="text-blue-100 font-medium text-xs sm:text-base leading-tight sm:leading-normal">
+                    Nhanh chóng, riêng tư, thoải mái
+                  </p>
+                </div>
+
+                {/* Bullet Points */}
+                <ul className="space-y-1.5 sm:space-y-2.5 font-semibold text-blue-50 text-xs sm:text-sm">
+                  <li className="flex items-center gap-1.5 sm:gap-2.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-blue-300 fill-blue-500/30 shrink-0" />
+                    <span>Đón tận nơi</span>
+                  </li>
+                  <li className="flex items-center gap-1.5 sm:gap-2.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-blue-300 fill-blue-500/30 shrink-0" />
+                    <span>Tài xế uy tín</span>
+                  </li>
+                  <li className="flex items-center gap-1.5 sm:gap-2.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-blue-300 fill-blue-500/30 shrink-0" />
+                    <span>Phục vụ 24/7</span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Title & Subtitle */}
-              <div>
-                <h3 className="typo-h2 text-white mb-2">
-                  Taxi 4 chỗ – 7 chỗ
-                </h3>
-                <p className="typo-body text-blue-100 font-medium">
-                  Di chuyển nhanh chóng, riêng tư, thoải mái
-                </p>
-              </div>
-
-              {/* Bullet Points */}
-              <ul className="space-y-2.5 typo-body font-semibold text-blue-50">
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-blue-300 fill-blue-500/30 shrink-0" />
-                  <span>Đón tận nơi</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-blue-300 fill-blue-500/30 shrink-0" />
-                  <span>Tài xế chuyên nghiệp</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-blue-300 fill-blue-500/30 shrink-0" />
-                  <span>Phục vụ 24/7</span>
-                </li>
-              </ul>
-
-              {/* Action Button */}
-              <div className="pt-2">
+              {/* Action Button at the Bottom */}
+              <div className="pt-2 mt-auto">
                 <button
                   onClick={() => onOpenBookingModal("Taxi 4-7 chỗ")}
-                  className="bg-white text-blue-600 hover:bg-blue-50 typo-btn px-6 py-3.5 rounded-2xl inline-flex items-center gap-2 transition-all shadow-xl hover:translate-x-1"
+                  className="bg-white text-blue-600 hover:bg-blue-50 typo-btn px-3 py-2 sm:px-6 sm:py-3.5 rounded-xl sm:rounded-2xl inline-flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-base transition-all shadow-xl hover:translate-x-1 w-full sm:w-auto"
                 >
-                  <span>Đặt taxi ngay</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span>Đặt ngay</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                 </button>
               </div>
             </div>
@@ -90,7 +93,7 @@ export default function ServicesSection({ onOpenBookingModal }: ServicesSectionP
           </div>
 
           {/* Card 2: Xe ghép (Full Bleed Background Image) */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-10 text-white min-h-[420px] flex flex-col justify-between group">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl p-4 sm:p-8 text-white min-h-[340px] sm:min-h-[420px] flex flex-col justify-between group">
             
             {/* Full Card Background Image */}
             <div className="absolute inset-0 z-0">
@@ -105,47 +108,50 @@ export default function ServicesSection({ onOpenBookingModal }: ServicesSectionP
               <div className="absolute inset-0 bg-gradient-to-r from-[#042e2b] via-[#094a45]/90 to-transparent" />
             </div>
 
-            {/* Card Content Overlay */}
-            <div className="relative z-10 space-y-5 max-w-xs sm:max-w-sm">
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-emerald-600 shadow-md">
-                <span className="material-symbols-outlined text-3xl">airport_shuttle</span>
+            {/* Card Content Overlay (Full Height Flex) */}
+            <div className="relative z-10 h-full flex flex-col justify-between w-full space-y-4">
+              {/* Top Group: Icon, Title & Bullets */}
+              <div className="space-y-3 sm:space-y-4">
+                {/* Icon */}
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white flex items-center justify-center text-emerald-600 shadow-md">
+                  <span className="material-symbols-outlined text-2xl sm:text-3xl">airport_shuttle</span>
+                </div>
+
+                {/* Title & Subtitle */}
+                <div>
+                  <h3 className="text-base sm:text-2xl font-bold text-white mb-1 sm:mb-2 leading-snug">
+                    Xe ghép
+                  </h3>
+                  <p className="text-emerald-100 font-medium text-xs sm:text-base leading-tight sm:leading-normal">
+                    Tiết kiệm chi phí, kết nối hành trình
+                  </p>
+                </div>
+
+                {/* Bullet Points */}
+                <ul className="space-y-1.5 sm:space-y-2.5 font-semibold text-emerald-50 text-xs sm:text-sm">
+                  <li className="flex items-center gap-1.5 sm:gap-2.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-emerald-300 fill-emerald-500/30 shrink-0" />
+                    <span>Từ 150K/vé</span>
+                  </li>
+                  <li className="flex items-center gap-1.5 sm:gap-2.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-emerald-300 fill-emerald-500/30 shrink-0" />
+                    <span>Giờ linh hoạt</span>
+                  </li>
+                  <li className="flex items-center gap-1.5 sm:gap-2.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-emerald-300 fill-emerald-500/30 shrink-0" />
+                    <span>Nhiều tuyến</span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Title & Subtitle */}
-              <div>
-                <h3 className="typo-h2 text-white mb-2">
-                  Xe ghép
-                </h3>
-                <p className="typo-body text-emerald-100 font-medium">
-                  Tiết kiệm chi phí, kết nối hành trình
-                </p>
-              </div>
-
-              {/* Bullet Points */}
-              <ul className="space-y-2.5 typo-body font-semibold text-emerald-50">
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-300 fill-emerald-500/30 shrink-0" />
-                  <span>Giá chỉ từ 50K/vé</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-300 fill-emerald-500/30 shrink-0" />
-                  <span>Linh hoạt thời gian</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-300 fill-emerald-500/30 shrink-0" />
-                  <span>Nhiều tuyến đường</span>
-                </li>
-              </ul>
-
-              {/* Action Button */}
-              <div className="pt-2">
+              {/* Action Button at the Bottom */}
+              <div className="pt-2 mt-auto">
                 <button
                   onClick={() => onOpenBookingModal("Xe ghép")}
-                  className="bg-white text-emerald-700 hover:bg-emerald-50 typo-btn px-6 py-3.5 rounded-2xl inline-flex items-center gap-2 transition-all shadow-xl hover:translate-x-1"
+                  className="bg-white text-emerald-700 hover:bg-emerald-50 typo-btn px-3 py-2 sm:px-6 sm:py-3.5 rounded-xl sm:rounded-2xl inline-flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-base transition-all shadow-xl hover:translate-x-1 w-full sm:w-auto"
                 >
-                  <span>Đặt xe ghép ngay</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span>Đặt ngay</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                 </button>
               </div>
             </div>
@@ -154,50 +160,50 @@ export default function ServicesSection({ onOpenBookingModal }: ServicesSectionP
 
         </div>
 
-        {/* Bottom Trust Features Bar (4 Items) */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Bottom Trust Features Bar (Hidden on Mobile) */}
+        <div className="hidden sm:grid bg-white rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 border border-slate-200/80 shadow-md grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
           
           {/* Feature 1 */}
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-6 h-6" />
+          <div className="flex items-center gap-2 sm:gap-3.5 p-1">
+            <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h4 className="typo-h3 text-slate-900 mb-1">An toàn tuyệt đối</h4>
-              <p className="typo-caption text-slate-500">Tài xế được xác minh, xe được kiểm định định kỳ</p>
+            <div className="min-w-0">
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm truncate">An toàn tuyệt đối</h4>
+              <p className="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">Tài xế xác minh, xe mới</p>
             </div>
           </div>
 
           {/* Feature 2 */}
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-              <Clock className="w-6 h-6" />
+          <div className="flex items-center gap-2 sm:gap-3.5 p-1">
+            <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <Clock className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h4 className="typo-h3 text-slate-900 mb-1">Đúng giờ</h4>
-              <p className="typo-caption text-slate-500">Cam kết đúng giờ, không để bạn chờ lâu</p>
+            <div className="min-w-0">
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm truncate">Đúng giờ</h4>
+              <p className="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">Cam kết đúng giờ đón</p>
             </div>
           </div>
 
           {/* Feature 3 */}
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-              <Banknote className="w-6 h-6" />
+          <div className="flex items-center gap-2 sm:gap-3.5 p-1">
+            <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <Banknote className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h4 className="typo-h3 text-slate-900 mb-1">Giá cả minh bạch</h4>
-              <p className="typo-caption text-slate-500">Báo giá rõ ràng, không phát sinh chi phí</p>
+            <div className="min-w-0">
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm truncate">Giá cả minh bạch</h4>
+              <p className="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">Trọn gói không phí ẩn</p>
             </div>
           </div>
 
           {/* Feature 4 */}
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-              <Headphones className="w-6 h-6" />
+          <div className="flex items-center gap-2 sm:gap-3.5 p-1">
+            <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <Headphones className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h4 className="typo-h3 text-slate-900 mb-1">Hỗ trợ 24/7</h4>
-              <p className="typo-caption text-slate-500">Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ</p>
+            <div className="min-w-0">
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm truncate">Hỗ trợ 24/7</h4>
+              <p className="text-[10px] sm:text-xs text-slate-500 truncate leading-tight">Tư vấn hỗ trợ 24/7</p>
             </div>
           </div>
 

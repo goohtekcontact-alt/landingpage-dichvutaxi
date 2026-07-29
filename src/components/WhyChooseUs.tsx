@@ -1,73 +1,77 @@
 "use client";
 
 import React from "react";
+import { ShieldCheck, Tag, Smartphone, Car, Headphones } from "lucide-react";
 
 export default function WhyChooseUs() {
-  const cards = [
+  const features = [
     {
-      icon: "schedule",
-      iconBg: "bg-primary-fixed text-primary",
-      title: "Phục vụ 24/7",
-      desc: "Luôn sẵn sàng phục vụ mọi nhu cầu di chuyển của bạn, bất kể ngày đêm."
+      icon: ShieldCheck,
+      title: "An toàn tuyệt đối",
+      desc: "Tài xế được đào tạo bài bản, kiểm tra lý lịch rõ ràng."
     },
     {
-      icon: "badge",
-      iconBg: "bg-secondary-fixed text-secondary",
-      title: "Tài xế chuyên nghiệp",
-      desc: "Đội ngũ tài xế được tuyển chọn, giàu kinh nghiệm và tận tâm."
+      icon: Tag,
+      title: "Giá cả hợp lý",
+      desc: "Giá cước minh bạch, không phụ phí ẩn."
     },
     {
-      icon: "payments",
-      iconBg: "bg-tertiary-fixed text-tertiary-container",
-      title: "Giá cả minh bạch",
-      desc: "Không phí ẩn. Báo giá trọn gói và rõ ràng cho mọi hành trình."
+      icon: Smartphone,
+      title: "Đặt xe dễ dàng",
+      desc: "Chỉ vài thao tác qua Hotline hoặc Zalo."
     },
     {
-      icon: "timer",
-      iconBg: "bg-primary-fixed text-primary",
-      title: "Luôn đúng giờ",
-      desc: "Đúng giờ là cam kết hàng đầu. Chúng tôi trân trọng thời gian của bạn."
+      icon: Car,
+      title: "Đa dạng lựa chọn",
+      desc: "Nhiều loại xe, đáp ứng mọi nhu cầu."
     },
     {
-      icon: "directions_car",
-      iconBg: "bg-secondary-fixed text-secondary",
-      title: "Xe sạch sẽ, hiện đại",
-      desc: "Đội xe đời mới, luôn được vệ sinh sạch sẽ và bảo dưỡng định kỳ."
-    },
-    {
-      icon: "verified_user",
-      iconBg: "bg-tertiary-fixed text-tertiary-container",
-      title: "Cam kết an toàn",
-      desc: "Quy trình an toàn nghiêm ngặt và theo dõi hành trình thời gian thực."
+      icon: Headphones,
+      title: "Hỗ trợ 24/7",
+      desc: "Đội ngũ CSKH luôn sẵn sàng hỗ trợ bạn."
     }
   ];
 
   return (
-    <section className="py-section-gap max-w-container-max mx-auto px-4 sm:px-margin-desktop">
-      <div className="text-center mb-16">
-        <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-primary mb-4">
-          Tại sao chọn Taxi Tour 76?
+    <section className="bg-[#00355f] text-white py-12 sm:py-16" id="why-choose-us">
+      <div className="max-w-container-max mx-auto px-4 sm:px-margin-desktop">
+        
+        {/* Title */}
+        <h2 className="text-center text-white text-2xl sm:text-3xl font-extrabold mb-10 tracking-tight">
+          Vì sao chọn Taxi Tour 76?
         </h2>
-        <div className="h-1 w-20 bg-secondary-container mx-auto rounded-full" />
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="glass-card p-8 rounded-2xl ambient-shadow hover:-translate-y-2 transition-transform duration-300"
-          >
-            <div className={`w-14 h-14 ${card.iconBg} flex items-center justify-center rounded-xl mb-6`}>
-              <span className="material-symbols-outlined text-[32px]">{card.icon}</span>
-            </div>
-            <h3 className="font-headline-sm text-headline-sm mb-3 font-bold text-on-surface">
-              {card.title}
-            </h3>
-            <p className="text-on-surface-variant font-body-md leading-relaxed">
-              {card.desc}
-            </p>
-          </div>
-        ))}
+        {/* 5 Features Grid (2 Columns on Mobile with Centered 5th Item, 5 Columns on Desktop) */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-6">
+          {features.map((item, idx) => {
+            const IconComponent = item.icon;
+            const isLastOdd = idx === features.length - 1;
+            return (
+              <div
+                key={idx}
+                className={`flex flex-col items-center text-center p-2 group ${
+                  isLastOdd ? "col-span-2 sm:col-span-1 lg:col-span-1" : ""
+                }`}
+              >
+                {/* Circle Icon */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white/25 bg-white/5 flex items-center justify-center mb-3 group-hover:border-emerald-400 group-hover:bg-emerald-500/10 transition-all duration-300 shadow-md">
+                  <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-white group-hover:text-emerald-400 transition-colors" />
+                </div>
+
+                {/* Title */}
+                <h3 className="font-bold text-white text-sm sm:text-base mb-1">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-xs text-slate-200 leading-relaxed max-w-[200px]">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
       </div>
     </section>
   );

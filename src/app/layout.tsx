@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Great_Vibes, Plus_Jakarta_Sans, Be_Vietnam_Pro } from "next/font/google";
+import { Great_Vibes, Plus_Jakarta_Sans, Be_Vietnam_Pro, Mea_Culpa } from "next/font/google";
 import "./globals.css";
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
   variable: "--font-great-vibes",
+  display: "swap",
+  weight: ["400"],
+});
+
+const meaCulpa = Mea_Culpa({
+  subsets: ["latin"],
+  variable: "--font-mea-culpa",
   display: "swap",
   weight: ["400"],
 });
@@ -35,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`scroll-smooth ${greatVibes.variable} ${plusJakarta.variable} ${beVietnamPro.variable}`}>
+    <html lang="vi" className={`scroll-smooth ${greatVibes.variable} ${meaCulpa.variable} ${plusJakarta.variable} ${beVietnamPro.variable}`}>
       <body className="bg-background text-on-background typo-body selection:bg-primary selection:text-white antialiased">
         {children}
       </body>
