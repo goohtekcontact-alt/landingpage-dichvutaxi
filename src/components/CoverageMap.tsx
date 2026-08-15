@@ -125,7 +125,7 @@ export default function CoverageMap({ onOpenBookingModal }: CoverageMapProps) {
                 <span>TUYẾN XE PHỔ BIẾN & THỜI GIAN DỰ KIẾN</span>
               </div>
               <div className="hidden sm:block text-xs text-slate-300">
-                Hotline hỗ trợ 24/7: <strong className="text-white">098x xxx xxx</strong>
+                Hotline hỗ trợ 24/7: <strong className="text-white">0255 899 9976</strong>
               </div>
             </div>
             

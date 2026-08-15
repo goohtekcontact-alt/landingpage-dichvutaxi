@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Testimonials() {
   const reviews = [
@@ -30,18 +31,21 @@ export default function Testimonials() {
   return (
     <section className="bg-surface-container-low py-section-gap" id="reviews">
       <div className="max-w-container-max mx-auto px-4 sm:px-margin-desktop">
-        <div className="text-center mb-8 sm:mb-16">
-          <h2 className="typo-h1 text-primary mb-2 sm:mb-4">
-            Khách hàng nói gì về chúng tôi
-          </h2>
-          <p className="text-on-surface-variant font-body-lg hidden sm:block">
-            Được tin tưởng bởi hàng ngàn hành khách mỗi tháng.
-          </p>
-        </div>
+        <ScrollReveal direction="up">
+          <div className="text-center mb-8 sm:mb-16">
+            <h2 className="typo-h1 text-primary mb-2 sm:mb-4">
+              Khách hàng nói gì về chúng tôi
+            </h2>
+            <p className="text-on-surface-variant font-body-lg hidden sm:block">
+              Được tin tưởng bởi hàng ngàn hành khách mỗi tháng.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {reviews.map((rev, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl ambient-shadow flex flex-col justify-between">
+            <ScrollReveal key={idx} direction="up" delay={idx * 0.15}>
+              <div className="bg-white p-8 rounded-2xl ambient-shadow flex flex-col justify-between hover-lift h-full">
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div
@@ -65,6 +69,7 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
+          </ScrollReveal>
           ))}
         </div>
       </div>

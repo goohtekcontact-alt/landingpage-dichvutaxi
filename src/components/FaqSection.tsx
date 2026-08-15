@@ -7,7 +7,7 @@ export default function FaqSection() {
   const faqs = [
     {
       q: "Làm thế nào để tôi liên hệ đặt xe?",
-      a: "Quý khách chỉ cần gọi điện thoại trực tiếp đến Hotline 098x xxx xxx hoặc bấm nút Chat Zalo. Điều hành viên của Taxi Tour 76 sẽ báo giá trọn gói và điều xe đến đón bạn trong 5 - 15 phút."
+      a: "Quý khách chỉ cần gọi điện thoại trực tiếp đến Hotline 0255 899 9976 hoặc Zalo 0931 386 786. Điều hành viên của Taxi Tour 76 sẽ báo giá trọn gói và điều xe đến đón bạn trong 5 - 15 phút."
     },
     {
       q: "Giá báo có phải là trọn gói không?",

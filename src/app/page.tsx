@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroBanner from "@/components/HeroBanner";
 import ServicesSection from "@/components/ServicesSection";
+import WeddingEventSection from "@/components/WeddingEventSection";
 import PopularRoutes from "@/components/PopularRoutes";
 import FleetShowcase from "@/components/FleetShowcase";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -16,23 +17,26 @@ export default function Home() {
   // Directly initiate phone call when booking action is requested
   const handleOpenCall = () => {
     if (typeof window !== "undefined") {
-      window.location.href = "tel:0981234567";
+      window.location.href = "tel:02558999976";
     }
   };
 
   return (
-    <main className="min-h-screen bg-background text-on-background font-body-md">
+    <main className="min-h-screen bg-background text-on-background font-body-md pt-[88px] overflow-x-hidden w-full" id="home">
       {/* Top Navigation */}
       <Navbar onOpenBookingModal={handleOpenCall} />
 
       {/* Hero Section */}
       <HeroBanner />
 
+      {/* Popular Routes (Xe Ghép & Taxi) */}
+      <PopularRoutes onOpenBookingModal={handleOpenCall} />
+
       {/* Our Services */}
       <ServicesSection onOpenBookingModal={handleOpenCall} />
 
-      {/* Popular Routes (Xe Ghép) */}
-      <PopularRoutes onOpenBookingModal={handleOpenCall} />
+      {/* Wedding & Event Services Dedicated Section */}
+      <WeddingEventSection />
 
       {/* Vehicle Fleet */}
       <FleetShowcase onOpenBookingModal={handleOpenCall} />

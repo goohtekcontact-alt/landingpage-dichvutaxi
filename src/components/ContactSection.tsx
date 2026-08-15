@@ -48,7 +48,7 @@ export default function ContactSection() {
 
               {/* Column 2: Hotline 24/7 Direct Call */}
               <a
-                href="tel:0981234567"
+                href="tel:02558999976"
                 className="p-5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md flex flex-col justify-between group hover:bg-white/15 transition-all shadow-sm"
               >
                 <div className="flex items-center gap-3 mb-2">
@@ -64,7 +64,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex items-center justify-between pt-1">
                   <span className="text-xl sm:text-2xl font-black text-amber-300 group-hover:text-amber-200 transition-colors">
-                    098x xxx xxx
+                    0255 899 9976
                   </span>
                   <span className="px-3 py-1.5 rounded-lg bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider group-hover:brightness-110 transition-all shadow-sm">
                     Gọi ngay ➔
@@ -74,7 +74,7 @@ export default function ContactSection() {
 
               {/* Column 3: Zalo & Email */}
               <a
-                href="https://zalo.me"
+                href="https://zalo.me/0931386786"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md flex flex-col justify-between group hover:bg-white/15 transition-all shadow-sm"
@@ -90,14 +90,14 @@ export default function ContactSection() {
                     />
                   </div>
                   <div>
-                    <div className="font-bold text-sm text-white">Hỗ Trợ qua Zalo</div>
-                    <div className="text-xs text-emerald-300 font-semibold">Phản hồi ngay trong 1 phút</div>
+                    <div className="font-bold text-sm text-white">Zalo Hỗ Trợ 24/7</div>
+                    <div className="text-xs text-emerald-300 font-bold">0931 386 786</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between pt-1">
                   <span className="text-xs text-blue-100/70 truncate flex items-center gap-1 max-w-[130px] sm:max-w-[150px]">
                     <Mail className="w-3.5 h-3.5 text-accent-orange shrink-0" />
-                    <span className="truncate">lienhe@dichvutaxitour76.com</span>
+                    <span className="truncate">hotro@dichvutaxitour76.com</span>
                   </span>
                   <span className="px-3 py-1.5 rounded-lg bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider group-hover:bg-emerald-400 transition-all shrink-0 shadow-sm">
                     Chat Zalo ➔

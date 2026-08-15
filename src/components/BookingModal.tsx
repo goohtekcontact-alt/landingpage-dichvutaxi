@@ -153,8 +153,9 @@ export default function BookingModal({ isOpen, onClose, initialData }: BookingMo
                     className="w-full px-3 py-2.5 rounded-xl bg-surface-container-low border border-surface-variant text-on-surface text-sm focus:ring-2 focus:ring-primary outline-none cursor-pointer"
                   >
                     <option>Xe 4 chỗ Sedan</option>
-                    <option>Xe 7 chỗ SUV</option>
-                    <option>Sedan hạng sang</option>
+                    <option>Xe 7 chỗ Premium</option>
+                    <option>Xe điện VinFast cao cấp</option>
+                    <option>Xe đám tiệc - Xe hội nghị</option>
                     <option>Xe Limousine / Van</option>
                   </select>
                 </div>
@@ -193,11 +194,11 @@ export default function BookingModal({ isOpen, onClose, initialData }: BookingMo
 
             <div className="flex flex-col gap-3 pt-2">
               <a
-                href="tel:+84123456789"
+                href="tel:02558999976"
                 className="w-full py-3 rounded-xl bg-primary text-white font-bold text-sm shadow-md flex items-center justify-center gap-2"
               >
                 <span className="material-symbols-outlined">call</span>
-                <span>Gọi Tổng Đài Hotline: +84 123 456 789</span>
+                <span>Gọi Tổng Đài Hotline: 0255 899 9976</span>
               </a>
 
               <button

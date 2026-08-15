@@ -9,7 +9,7 @@ export default function BookingProcess() {
       num: "01",
       icon: PhoneCall,
       title: "1. Liên hệ đặt xe",
-      desc: "Gọi Hotline 098x xxx xxx, gửi tin Zalo hoặc điền thông tin chuyến đi trên website.",
+      desc: "Gọi Hotline 0255 899 9976, gửi tin Zalo 0931 386 786 hoặc điền thông tin chuyến đi trên website.",
       active: true
     },
     {
@@ -114,10 +114,10 @@ export default function BookingProcess() {
           </div>
 
           <a
-            href="tel:0981234567"
+            href="tel:02558999976"
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-accent-orange text-white typo-btn hover:brightness-110 transition-all shadow-md inline-flex items-center justify-center gap-2 text-sm shrink-0"
           >
-            <span>Gọi 098x xxx xxx</span>
+            <span>Gọi 0255 899 9976</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
